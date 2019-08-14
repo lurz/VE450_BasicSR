@@ -9,8 +9,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.progress_bar import ProgressBar
 
 # configurations
-img_folder = '/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800/*'  # glob matching pattern
-lmdb_save_path = '/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800.lmdb'  # must end with .lmdb
+img_folder = '/Users/lurz/Documents/Undergraduate/SU2019/VE450/data/video_high/*'  # glob matching pattern
+lmdb_save_path = '/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/video_data/video_HR.lmdb'  # must end with .lmdb
 mode = 1 # 1 for small data (more memory), 2 for large data (less memory)
 
 img_list = sorted(glob.glob(img_folder))

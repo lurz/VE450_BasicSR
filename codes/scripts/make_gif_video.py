@@ -12,12 +12,12 @@ import numpy as np
 import cv2
 
 
-crt_path = os.path.dirname(os.path.realpath(__file__))
+crt_path = '/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/BasicSR/results/RRDB_ESRGAN_x4/single/' #os.path.dirname(os.path.realpath(__file__))
 
 # configurations
-img_name_list = ['x1', 'x2', 'x3', 'x4', 'x5']
+img_name_list = ['02', '05', '08', '10']
 ext = '.png'
-text_list = ['1', '2', '3', '4', '5']
+text_list = ['0.2', '0.5', '0.8', '1.0']
 h_start, h_len = 0, 576
 w_start, w_len = 10, 352
 enlarge_ratio = 1
@@ -27,15 +27,15 @@ font_thickness = 4
 color = 'red'
 duration = 0.8  # second
 use_imageio = False  # use imageio to make gif
-make_video = False  # make video using ffmpeg
+make_video = True  # make video using ffmpeg
 
 is_crop = True
 if h_start == 0 or w_start == 0:
     is_crop = False # do not crop
 
 img_name_list = [x + ext for x in img_name_list]
-input_folder = os.path.join(crt_path, './ori')
-save_folder = os.path.join(crt_path, './ori')
+input_folder = os.path.join(crt_path, 'ori')
+save_folder = os.path.join(crt_path, 'ori')
 color_tb = {}
 color_tb['yellow'] = (0, 255, 255)
 color_tb['green'] = (0, 255, 0)

@@ -10,13 +10,13 @@ from utils.progress_bar import ProgressBar
 
 def main():
     """A multi-thread tool to crop sub imags."""
-    input_folder = '/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800'
-    save_folder = '/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800_sub'
+    input_folder = '/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/scydata/high'
+    save_folder = '/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/scydata/high_mod'
     n_thread = 20
     crop_sz = 480
     step = 240
     thres_sz = 48
-    compression_level = 3  # 3 is the default value in cv2
+    compression_level = 0  # 3 is the default value in cv2
     # CV_IMWRITE_PNG_COMPRESSION from 0 to 9. A higher value means a smaller size and longer
     # compression time. If read raw images during training, use 0 for faster IO speed.
 

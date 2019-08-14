@@ -3,25 +3,25 @@
   , "suffix": "_SRGAN"
   , "model": "srgan"
   , "scale": 4
-  , "gpu_ids": [0]
+  , "gpu_ids": []
 
   , "datasets": {
     "test_1": { // the 1st test dataset
-      "name": "set5"
+      "name": "0708_srgan"
       , "mode": "LRHR"
-      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5"
-      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5_bicLRx4"
+      , "dataroot_HR": "/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/all_test/HR"
+      , "dataroot_LR": "/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/all_test/LR"
     }
-    , "test_2": { // the 2nd test dataset
-      "name": "set14"
-      , "mode": "LRHR"
-      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14"
-      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14_bicLRx4"
-    }
+    // , "test_2": { // the 2nd test dataset
+    //   "name": "set14"
+    //   , "mode": "LRHR"
+    //   , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14"
+    //   , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14_bicLRx4"
+    // }
   }
 
   , "path": {
-    "root": "/home/xtwang/Projects/BasicSR"
+    "root": "/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/BasicSR"
     , "pretrain_model_G": "../experiments/pretrained_models/SRGAN_bicx4_303_505.pth"
   }
 

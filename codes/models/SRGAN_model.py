@@ -18,6 +18,10 @@ class SRGANModel(BaseModel):
         super(SRGANModel, self).__init__(opt)
         train_opt = opt['train']
 
+        print ("*********************************************************")
+        print (self.device)
+        self.device = 'cpu'
+
         # define networks and load pretrained models
         self.netG = networks.define_G(opt).to(self.device)  # G
         if self.is_train:

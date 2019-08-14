@@ -1,16 +1,16 @@
 {
-  "name": "debug_002_RRDB_ESRGAN_x4_DIV2K" //  please remove "debug_" during training
+  "name": "local_train_0626" //  please remove "debug_" during training
   , "use_tb_logger": true
   , "model":"srragan"
   , "scale": 4
-  , "gpu_ids": [0]
+  , "gpu_ids": []
 
   , "datasets": {
     "train": {
-      "name": "DIV2K"
+      "name": "LocalTrain"
       , "mode": "LRHR"
-      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800_sub.lmdb"
-      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/DIV2K800/DIV2K800_sub_bicLRx4.lmdb"
+      , "dataroot_HR": "/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/scydata/localTestGT.lmdb"
+      , "dataroot_LR": "/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/scydata/localTestLR.lmdb"
       , "subset_file": null
       , "use_shuffle": true
       , "n_workers": 8
@@ -20,17 +20,17 @@
       , "use_rot": true
     }
     , "val": {
-      "name": "val_set14_part"
+      "name": "LocalVal"
       , "mode": "LRHR"
-      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14_part/Set14"
-      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14_part/Set14_bicLRx4"
+      , "dataroot_HR": "/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/HASCOTest/dataset"
+      , "dataroot_LR": "/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/HASCOTest/LR/x4"
     }
   }
 
   , "path": {
-    "root": "/home/xtwang/Projects/BasicSR"
+    "root": "/Users/lurz/Documents/Undergraduate/SU2019/VE450/GithubCode/BasicSR"
     // , "resume_state": "../experiments/debug_002_RRDB_ESRGAN_x4_DIV2K/training_state/16.state"
-    , "pretrain_model_G": "../experiments/pretrained_models/RRDB_PSNR_x4.pth"
+    , "pretrain_model_G": "../experiments/pretrained_models/RRDB_PSNR_x4_old_arch.pth"
   }
 
   , "network_G": {
@@ -82,7 +82,7 @@
   }
 
   , "logger": {
-    "print_freq": 200
+    "print_freq": 100
     , "save_checkpoint_freq": 5e3
   }
 }

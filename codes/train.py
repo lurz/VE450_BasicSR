@@ -46,7 +46,7 @@ def main():
     # tensorboard logger
     if opt['use_tb_logger'] and 'debug' not in opt['name']:
         from tensorboardX import SummaryWriter
-        tb_logger = SummaryWriter(log_dir='../tb_logger/' + opt['name'])
+        tb_logger = SummaryWriter(logdir='../tb_logger/' + opt['name'])
 
     # random seed
     seed = opt['train']['manual_seed']
@@ -93,17 +93,23 @@ def main():
 
     # training
     logger.info('Start training from epoch: {:d}, iter: {:d}'.format(start_epoch, current_step))
+    print ("Start.")
     for epoch in range(start_epoch, total_epochs):
+        print ("Enter first for loop.")
+        # print (train_loader)
         for _, train_data in enumerate(train_loader):
+            print ("Enter second for loop.")
             current_step += 1
             if current_step > total_iters:
                 break
             # update learning rate
             model.update_learning_rate()
+            print ("Model update learning rate.")
 
             # training
             model.feed_data(train_data)
             model.optimize_parameters(current_step)
+            print ("Training. Updating parameters.")
 
             # log
             if current_step % opt['logger']['print_freq'] == 0:

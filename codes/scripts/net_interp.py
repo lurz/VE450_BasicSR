@@ -1,10 +1,11 @@
+import sys
 import torch
 from collections import OrderedDict
 
-alpha = 0.8
+alpha = float(sys.argv[1])
 
-net_PSNR_path = './models/RRDB_PSNR_x4.pth'
-net_ESRGAN_path = './models/RRDB_ESRGAN_x4.pth'
+net_PSNR_path = './models/RRDB_PSNR_x4_old_arch.pth'
+net_ESRGAN_path = './models/latest_G.pth'
 net_interp_path = './models/interp_{:02d}.pth'.format(int(alpha*10))
 
 net_PSNR = torch.load(net_PSNR_path)

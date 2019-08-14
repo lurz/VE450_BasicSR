@@ -18,6 +18,9 @@ class SRRaGANModel(BaseModel):
         train_opt = opt['train']
 
         # define networks and load pretrained models
+        print ("*********************************************************")
+        print (self.device)
+        self.device = 'cpu'
         self.netG = networks.define_G(opt).to(self.device)  # G
         if self.is_train:
             self.netD = networks.define_D(opt).to(self.device)  # D

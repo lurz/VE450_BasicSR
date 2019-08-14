@@ -1,5 +1,6 @@
 # folder
 .vscode
+.DS_Store
 
 experiments/*
 !experiments/pretrained_models
