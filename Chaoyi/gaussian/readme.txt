@@ -1,0 +1,1 @@
+Put all your images in selected directory and run python blur.py. High resolution image will be in "high: directory and low resolution image will be in "low" directory.

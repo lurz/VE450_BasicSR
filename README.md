@@ -5,3 +5,6 @@ This is the repository for ESRGAN. Most of the codes remain unchanged from the o
 2. To draw the validation graph, please use tb_logger or draw_val_graph.py. 
 3. Please use generate_mod_LR_bic.py to prepare the data. 
 4. Use net_interp.py to tune the alpha parameter. 
+
+# other
+In /Chaoyi, this directory contains the code to add gaussian kernel to the images and extract video frames.
